@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout (Teste de Usabilidade)</title>
+    <link rel="stylesheet" href="estilo.css">
+</head><br>
+<body>
+    <div class="checkout-container">
+        <h1>Finalizar Compra</h1>
+        <form id="checkoutForm">
+            <fieldset>
+                <legend>Informações de Envio</legend>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required aria-label="Endereço de entrega">
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" pattern="\d{5}-?\d{3}" title="Formato: 12345-678" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pagamento</legend>
+                <input type="radio" id="cartao" name="pagamento" value="cartao" checked>
+                <label for="cartao">Cartão de Crédito</label>
+
+                <input type="radio" id="boleto" name="pagamento" value="boleto">
+                <label for="boleto">Boleto Bancário</label>
+            </fieldset>
+
+            <button type="submit" id="finalizarBtn">Finalizar Pedido</button>
+            <p id="feedback"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
